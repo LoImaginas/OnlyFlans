@@ -31,22 +31,4 @@ OnlyFlans es un proyecto de Django. Este README proporciona una guía paso a pas
 5. Ejecutar el servidor de desarrollo: 
    ```python3 manage.py runserver``` (detener ctrl + c)
 
-## Estructura del proyecto
-OnlyFlans/
-  ├── OnlyFlans/
-  │   ├── __pycache__/
-  │   ├── __init__.py
-  │   ├── asgi.py
-  │   ├── settings.py
-  │   ├── urls.py
-  │   └── wsgi.py
-  ├── db.sqlite3
-  ├── manage.py
-  ├── requerimiento1/ 
-  ├── requerimiento2/  
-  ├── requerimiento3/  
-  ├── vonlyflans/
-  ├── onlyflans_mac.txt
-  ├── OnlyFlans.png
-  └── README.md
 
