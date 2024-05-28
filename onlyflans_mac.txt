@@ -1,0 +1,68 @@
+Forma numero 1
+Requiere instalacion de virtualenvwrapper
+Creación de entorno virtual django en mac
+
+1-	mkvirtualenv vOnlyflans
+2-	workon vOnlyflans
+3-	workon (verificar todos los entornos virtuales creados)
+4-	Python3 –version (verificar versión instalada, captura de pantalla)
+5-	Pip3 install django==3.2
+6-	Python –m django versión  o Python –m django-admin versión  (verificar versión de django instalada en nuestro entorno virtual)
+7-	Pip3 freeze > requirements–vOnlyflans.txt
+
+Creación de proyecto django en mac
+
+1-	django-admin startproyect OnlyFlans
+2-	cd OnlyFlans
+3-	python3 manage.py startapp onlyflans_app  (web)
+4-	INSTALLED_APPS = [
+“onlyflansapp”,
+…
+]
+5-	revisar view.py
+6-	revisar urls.py
+7-	python3 manage.py makemigrations
+8-	python3 manage.py migrate
+9-	python3 manage.py runserver
+
+----------------------------------------------------------------------------------------
+
+forma numero 2   (utilizada)
+
+creacion de entorno virtual
+
+1-	python3 –m venv vOnlyFlans
+2-	source vOnlyFlans/bin/activate
+3-	pip3 install Django  (5.0.6)
+4- Pip3 freeze > requirements– vOnlyflans.txt
+5- python3 - version   (salir con ctrl + d) (version3.12.2)
+
+
+creacion de Proyecto
+
+1-	Django-admin startproject OnlyFlans
+2-	Cd OnlyFlans
+-----
+3-	Python3 manage.py startapp onlyflans_app (web)
+4-	INSTALLED_APPS = [
+“onlyflansapp”,
+…
+]
+-----
+
+5-	Crear funciones en view.py en la app creada (view se crea con app)
+6-	Agregar ruta en urls.py de la aplicación principal (urls se crea con startpoyect, ya esta creada)
+
+7-	Python3 manage.py makemigrations
+8-	Python manage.py migrate
+9-	Python manage.py runserver
+
+ctrl + c (detener ejecucion)
+
+
+3. Usando django-admin genera un proyecto llamado onlyflans, una vez creado ingresa
+a la carpeta del proyecto generado, aplica las migraciones y ejecuta tu servidor
+utilizando los comandos correspondientes del archivo manage.py y accede a la url
+disponible para tu proyecto. Una vez que puedas acceder a la web en tu navegador,
+realiza un “pantallazo” de ésta y guardalo en un archivo jpg o png dentro de la carpeta
+requerimiento3.
