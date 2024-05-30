@@ -36,10 +36,10 @@ __________________________________________________________________
 
 # HITO 2 
 
-# Entrar al entorno virtual y activarlo
+## Entrar al entorno virtual y activarlo
     source vOnlyFlans/bin/activate
 
-## Creacion de aplicacion web 
+# Creacion de aplicacion web 
 
 1. crear aplicacion web:
    ```python3 manage.py startapp web```
@@ -54,6 +54,7 @@ __________________________________________________________________
 6. crear el archivo "welcome.html"
    ```dentro de "web/templates" crear un archivo llamado "welcome.html"```
 7. configurar las vistas y la URLs
+   
  a. views.py:
    def index(request):
        return render(request, 'index.html')
@@ -61,6 +62,7 @@ __________________________________________________________________
        return render(request, 'about.html')
    def welcome(request):
       return render(request, 'welcome.html')
+
       
  b. urls.py:
    from web.views import index, about, welcome  
