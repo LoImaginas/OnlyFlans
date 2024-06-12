@@ -1,9 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>OnlyFlans - Welcome</title>
-</head>
-<body>
-    bienvenido cliente
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+
+    {% block content %}
+    <div class="container mt-2 mb-2">
+        <h1 class="text-center">Bienvenido {{ user.get_username}}</h1>
+        <div class="row">
+            {% for flan in flanes %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}" data-price="${{ flan.price }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ flan.name }}</h5>
+                        <p class="card-text">{{ flan.description }}</p> <!-- Limita la descripción a 20 palabras -->
+                        <a href="#" class="read-more">Leer más</a> <!-- Enlace para leer más -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}

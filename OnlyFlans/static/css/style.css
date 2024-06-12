@@ -1,0 +1,234 @@
+body {  
+    background-color: rgba(128, 23, 130, 0.451) !important; /* Color de fondo deseado */
+    font-family: "raleway", sans-serif;
+    
+}
+
+.navbar {
+    background-color: #b78787; /* Cambia esto al color deseado */
+    /* Otros estilos según sea necesario */
+}
+
+.footer {
+    background-color: #5e3b68; /* Cambia esto al color deseado */
+    /* Otros estilos según sea necesario */
+}
+
+.header-custom {
+    background-color: rgba(128, 23, 130, 0.451); /* Cambia el color de fondo si es necesario */
+    padding: 20px; /* Ajusta el espaciado según lo necesites */
+    display: block;
+}
+@media only screen and (max-width:912px) {
+    .header-custom {
+        display: none; /* Oculta el encabezado en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el contenedor de las imágenes del header */
+.container.header-img {
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+
+.imagen {
+    width: 275px; /* Ajusta el ancho máximo según lo necesites */
+    flex-grow: 1px; /* Ajusta el margen horizontal entre las imágenes */
+    object-fit:cover;
+    opacity: .8;
+    transition: .10s step-end;
+}
+
+.imagen:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 7;
+    filter: contrast (200%);
+
+}
+
+/*#SobreNosotros*/
+
+.text-bg-dark {
+    color: #010406 !important;
+    background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.container-about {
+    transform: scale(0.7); /* Reduce el tamaño de las tarjetas en un 30% */
+    margin-bottom: 1px; /* Reduce el espacio entre tarjetas */
+    transform-origin: top left; /* Asegura que la tarjeta se escale desde la esquina superior izquierda */
+    text-align: justify;
+}
+
+.container-about .card-title {
+    font-size: 2rem; /* Ajusta el tamaño de la letra según sea necesario */
+    color: #010406;
+}
+
+.container-about .card-text {
+    font-size: 25px; /* Ajusta el tamaño de la letra según sea necesario */
+    color: #040504f3 !important;
+    position: absolute;
+    top: 12%; /* Ajusta el margen superior */
+    left: 50%; /* Ajusta el margen derecho */
+    width: 50%; /* Ajusta el ancho del texto */
+    height: 90%; /* Ajusta la altura del texto */
+    background-color: #c299b4fc; /* Fondo sólido */
+    padding: 5px; /* Espacio alrededor del texto */
+    transition: height 0.3s; /* Transición suave para la expansión del texto */
+    overflow: hidden; /* Evita que el texto se desborde */
+}
+
+.container-about .card-img {
+    opacity: 200; /* Define el nivel de opacidad deseado para todas las imágenes */
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* cards del index y welcome */
+
+.card {
+    height: 400px; /* Altura fija para todas las cards */
+    position: relative; /* Posición relativa para que los elementos absolutos se posicionen correctamente */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+  /* Estilos para las imágenes de las cards de flanes movimiento */
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.card-img-top:hover {
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre la imagen */
+    opacity: 1;
+    filter: contrast(200%);
+    transform: scale(1.05);
+}
+
+.card-tooltip {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(220, 109, 192, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    z-index: 1; /* Asegura que el tooltip esté por encima de la imagen */
+}
+
+/*estilos para el titulo*/
+.card-title {
+    position: absolute; /* Posición absoluta para superponer elementos */
+    top: 0; /* Se coloca en la parte superior */
+    left: 0; /* Se coloca en la parte izquierda */
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    background-color: #c299b4fc; /* Fondo  sólido */
+    padding: 5px; /* Espacio alrededor del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centra el texto horizontalmente */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+    z-index: 1; /* Asegura que el título esté sobre el texto */
+}
+
+/* extender el texto leer mas*/
+/* estilos para la descripcion*/
+.card-text {
+    position: absolute; /* Posición absoluta para superponer elementos */
+    top: 60%; /* Se coloca en la mitad inferior de la tarjeta */
+    left: 0; /* Se coloca en la parte izquierda */
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 50%; /* La descripción ocupa la mitad inferior de la tarjeta */
+    background-color: #c299b4fc; /* Fondo sólido */
+    padding: 10px; /* Espacio alrededor del texto */
+    transition: height 0.3s; /* Transición suave para la expansión del texto */
+    overflow: hidden; /* Evita que el texto se desborde */
+}
+
+.card-text.expanded {
+     /* Cambia overflow a visible para mostrar todo el texto */
+    max-height: none; /* Ajusta la altura a auto para que se expanda según sea necesario */
+     /* Esto asegura que se muestren todas las líneas de texto */
+}
+
+.read-more {
+    color: rgb(41, 5, 37); /* Color del texto */
+    text-decoration: underline; /* Subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre él */
+}
+
+/*   mensaje de success */ 
+
+.mensaje {
+    font-family: 'Roboto', sans-serif; /* Elige una fuente bonita */
+    font-size: 24px; /* Tamaño del texto */
+    color: #2d2020 !important; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    padding: 20px; /* Espaciado alrededor del texto */
+    background-color: #c299b4fc; /* Color de fondo */
+    border-radius: 10px,; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(182, 151, 151, 0.1); /* Sombra suave */
+    border-color: solid #fff;
+}
+
+/* imagen de form de contacto*/
+
+.contact-form {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #c299b4fc; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #fff;
+}
+
+.imagen-contact {
+    width: 70%; /* Ancho al 100% del contenedor */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.0); /* Sombra suave */
+    margin-top: 5px; /* Margen superior */
+
+}
+ 
+/* imagen de inicio de sesion*/
+.imagen-sesion {
+    width: 90%; /* Ancho al 100% del contenedor */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.0); /* Sombra suave */
+    margin-top: 2px; /* Margen superior */
+    margin-bottom: 30px;
+    margin-left: 20px;
+
+}
+
+.social-icons {
+    display: flex; /* Activa el modo flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.social-icon {
+    width: 25px; /* Ajusta este valor según lo necesites */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.whatsapp-link {
+    display: block; /* Activa el modo flexbox */
+    width:200px;
+    padding:10px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration:none;
+    border-radius:5px;
+}
+

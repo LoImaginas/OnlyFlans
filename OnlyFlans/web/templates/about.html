@@ -1,9 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>OnlyFlans - About</title>
-</head>
-<body>
-    acerca
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block content %}
+    
+    <div class="container-about mt-2 mb-2">
+        <h1 class="text-center">Acerca de Nosotros</h1> 
+        <div class="card text-bg-dark">
+            <img src="{% static 'img/SobreNosotros.jpeg' %}" class="card-img" alt="acerca de nosotros">
+            <div class="card-img-overlay">
+              <p class="card-text">En OnlyFlans, nos enorgullece ser un destino de referencia para los amantes de los flanes y los postres gourmet. Desde nuestros inicios, hace más de 5 años, nos hemos dedicado a ofrecer productos de la más alta calidad, utilizando ingredientes frescos y técnicas artesanales para crear experiencias inolvidables para nuestros clientes.</p>
+            </div>
+          </div> 
+          <div class="card text-bg-dark ">
+            <img src="{% static 'img/nuestrahistoria.webp' %}" class="card-img" alt="Nuestra Historia">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Nuestra Historia</h5>
+              <p class="card-text">Desde que abrimos nuestras puertas, nuestra misión ha sido clara: proporcionar a nuestros clientes una experiencia culinaria única, llena de sabores exquisitos y presentaciones impecables. Comenzamos con una pequeña pastelería y, gracias a la aceptación y el cariño de nuestros clientes, hemos crecido para convertirnos en una pastelería reconocida por nuestros flanes gourmet y otros postres excepcionales.</p>
+            </div>
+          </div>
+          <div class="card text-bg-dark">
+            <img src="{% static 'img/flanesgourmetymas.png' %}" class="card-img" alt="Flanes Gourmet">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Flanes Gourmet y mas</h5>
+              <p class="card-text">Nuestros flanes gourmet son el corazón de OnlyFlans. Cada uno de ellos es una obra maestra, elaborada con los mejores ingredientes y una pasión inigualable por la perfección. Además, ampliamos nuestra oferta para incluir una variedad de pasteles y postres que deleitan el paladar y satisfacen los antojos más exigentes.</p>
+            </div>
+          </div>
+          <div class="card text-bg-dark">
+            <img src="{% static 'img/Cafeteria.jpeg' %}" class="card-img" alt="Cafeteria">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Servicio de Cafetería</h5>
+              <p class="card-text">Entendemos que un buen postre merece ser acompañado de una excelente bebida. Por eso, también ofrecemos un servicio de cafetería donde puedes disfrutar de una selección de cafés especiales, tés y otras bebidas que complementan perfectamente nuestros postres. Ya sea que vengas a disfrutar de un momento de tranquilidad o a compartir con amigos y familiares, nuestra cafetería es el lugar ideal.</p>   
+            </div>
+          </div>  
+          <div class="card text-bg-dark">
+            <img src="{% static 'img/vision.jpeg' %}" class="card-img" alt="Vision">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Visión</h5>
+              <p class="card-text">Nuestra visión es ser líderes en la industria de la pastelería gourmet, reconocidos por nuestra innovación, calidad y servicio excepcional. Aspiramos a expandir nuestra presencia, llevando nuestros deliciosos flanes y postres a más personas y convirtiéndonos en una marca sinónimo de excelencia y satisfacción.</p>
+              </div>
+          </div> 
+          <div class="card text-bg-dark">
+            <img src="{% static 'img/mision.jpeg' %}" class="card-img" alt="Vision">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Misión</h5>
+              <p class="card-text">En OnlyFlans, nuestra misión es endulzar la vida de nuestros clientes con productos de alta calidad y un servicio amigable y profesional. Nos comprometemos a mantener nuestros altos estándares, a seguir innovando en nuestras creaciones y a proporcionar una experiencia inolvidable en cada visita.</p>
+          </div>
+          </div>         
+    </div>
+    {% endblock %}
+

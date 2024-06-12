@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-2 mb-2">
+    <h1 class="text-center">Contacto</h1>
+    <div class="row">
+        <div class="col-md-6"> <!-- Columna para el formulario de contacto -->
+            <form method="post" class="contact-form">
+                 {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" Value="enviar"></input>
+            </form>    
+        </div>
+        <div class="col-md-6"> <!-- Columna para la imagen -->
+            <img src="{% static 'img/avion.png' %}" class="imagen-contact" alt="avion"> 
+        </div>
+        <div class="whatsapp-link">Enviar mensaje de WhatsApp"
+            <a href="https://wa.me/56954435762?text=Hola,%20me%20gustaria%20contactarme%20contigo">
+            <img src="{% static 'img/icons/whatsapp.png' %}" width="50" height="50"></a>
+        </div>
+</div>
+
+{% endblock %}
+
